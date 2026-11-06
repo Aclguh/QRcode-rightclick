@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "右键扫描二维码",
+    "description": "The name of the extension"
+  },
+  "appDesc": {
+    "message": "右键点击网页图片即可离线快速扫描识别二维码，支持链接直达、复制、历史记录及本地生成。",
+    "description": "The description of the extension"
+  },
+  "contextMenuTitle": {
+    "message": "扫描图片中的二维码",
+    "description": "Context menu title"
+  },
+  "scanSuccess": {
+    "message": "扫描成功",
+    "description": "Scan success title"
+  },
+  "scanFailed": {
+    "message": "未识别到二维码",
+    "description": "Scan failed title"
+  },
+  "copySuccess": {
+    "message": "已复制到剪切板",
+    "description": "Copy success message"
+  }
+}

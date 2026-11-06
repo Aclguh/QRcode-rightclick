@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>右键扫描二维码</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="header-brand">
+        <img src="../icons/icon32.png" alt="Logo" class="header-logo">
+        <span class="header-title">二维码工具箱</span>
+      </div>
+      <div class="header-subtitle">离线扫描与生成</div>
+    </header>
+
+    <!-- Nav Tabs -->
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="tab-scan">📷 识别扫码</button>
+      <button class="tab-btn" data-tab="tab-generate">⚡ 快速生成</button>
+      <button class="tab-btn" data-tab="tab-history">🕒 历史记录</button>
+    </nav>
+
+    <!-- Tab 1: Scan -->
+    <section id="tab-scan" class="tab-content active">
+      <div class="drop-zone" id="drop-zone">
+        <div class="drop-icon">📥</div>
+        <div class="drop-text">点击选择图片 或 拖拽至此处</div>
+        <div class="drop-hint">支持直接按 <strong>Ctrl + V</strong> 粘贴截图</div>
+        <input type="file" id="file-input" accept="image/*" hidden>
+      </div>
+
+      <div class="scan-result-card hidden" id="scan-result-card">
+        <div class="result-header">
+          <span class="result-badge" id="result-badge">纯文本</span>
+          <span class="result-time" id="result-time">刚刚</span>
+        </div>
+        <div class="result-preview-wrap">
+          <img id="result-thumb" class="result-thumb" alt="Preview">
+          <textarea id="result-text" class="result-textbox" readonly></textarea>
+        </div>
+        <div class="result-actions">
+          <button class="btn btn-secondary" id="btn-copy-result">复制内容</button>
+          <button class="btn btn-primary hidden" id="btn-open-result">打开链接</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 2: Generate -->
+    <section id="tab-generate" class="tab-content">
+      <div class="gen-input-group">
+        <div class="gen-toolbar">
+          <label for="gen-text">输入文本或链接：</label>
+          <button class="btn-text-link" id="btn-use-current-url">填入当前网页网址</button>
+        </div>
+        <textarea id="gen-text" class="gen-textbox" placeholder="https://example.com 或 任意文字内容..."></textarea>
+      </div>
+      <button class="btn btn-primary btn-block" id="btn-generate-qr">生成二维码</button>
+
+      <div class="gen-preview-box hidden" id="gen-preview-box">
+        <div class="qr-canvas-wrap" id="qr-output-wrap"></div>
+        <div class="gen-actions">
+          <button class="btn btn-secondary" id="btn-download-qr">下载二维码图片</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 3: History -->
+    <section id="tab-history" class="tab-content">
+      <div class="history-toolbar">
+        <span class="history-count" id="history-count">共 0 条记录</span>
+        <button class="btn-text-link btn-danger-link" id="btn-clear-history">清空记录</button>
+      </div>
+      <div class="history-list" id="history-list">
+        <div class="empty-state">暂无扫描历史记录</div>
+      </div>
+    </section>
+  </div>
+
+  <script src="../lib/jsQR.js"></script>
+  <script src="../lib/qrcode.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

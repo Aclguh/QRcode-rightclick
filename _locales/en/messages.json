@@ -1,0 +1,26 @@
+{
+  "appName": {
+    "message": "Right-Click QR Code Scanner",
+    "description": "The name of the extension"
+  },
+  "appDesc": {
+    "message": "Right-click any image to scan and decode QR codes locally. Supports instant link opening, copy, history and QR generation.",
+    "description": "The description of the extension"
+  },
+  "contextMenuTitle": {
+    "message": "Scan QR code in image",
+    "description": "Context menu title"
+  },
+  "scanSuccess": {
+    "message": "Scan Successful",
+    "description": "Scan success title"
+  },
+  "scanFailed": {
+    "message": "No QR code found",
+    "description": "Scan failed title"
+  },
+  "copySuccess": {
+    "message": "Copied to clipboard",
+    "description": "Copy success message"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "qrcode-rightclick",
+  "version": "1.0.0",
+  "description": "Chrome Extension for scanning and generating QR codes directly via right-click or popup toolbar.",
+  "main": "background.js",
+  "scripts": {
+    "test": "node scripts/test_qr.js",
+    "icons": "node scripts/generate_icons.js",
+    "pack": "node scripts/pack.js"
+  },
+  "keywords": [
+    "chrome-extension",
+    "manifest-v3",
+    "qr-code",
+    "qrcode",
+    "scanner",
+    "context-menu"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jsqr": "^1.4.0",
+    "qrcode-generator": "^1.4.4"
+  }
+}
