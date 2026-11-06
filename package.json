@@ -16,7 +16,11 @@
     "scanner",
     "context-menu"
   ],
-  "author": "",
+  "author": "Aclguh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aclguh/QRcode-rightclick.git"
+  },
   "license": "MIT",
   "dependencies": {
     "jsqr": "^1.4.0",

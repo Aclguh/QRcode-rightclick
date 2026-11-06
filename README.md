@@ -50,7 +50,7 @@
 
 1. 点击 GitHub 右上角绿色按钮 **Code -> Download ZIP** 或通过 Git 克隆到本地：
    ```bash
-   git clone https://github.com/your-username/qrcode-rightclick.git
+   git clone https://github.com/Aclguh/QRcode-rightclick.git
    ```
 2. 打开 Chromium 内核浏览器（如 **Google Chrome**、**Microsoft Edge**、**Brave** 等），在地址栏输入：
    - Chrome：`chrome://extensions/`
