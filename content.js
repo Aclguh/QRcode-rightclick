@@ -197,7 +197,7 @@
       }
 
       *, *::before, *::after {
-        box-sizing: inherit;
+        box-sizing: border-box !important;
       }
 
       /* Backdrop */
@@ -366,16 +366,21 @@
       }
 
       .qr-textbox {
+        box-sizing: border-box !important;
         width: 100%;
+        min-width: 100%;
+        max-width: 100%;
         max-height: 180px;
         min-height: 80px;
         padding: 12px;
+        margin: 0;
         background: #f8fafc;
         border: 1px solid #e2e8f0;
         border-radius: 8px;
         font-size: 13px;
         line-height: 1.6;
         word-break: break-all;
+        overflow-wrap: anywhere;
         white-space: pre-wrap;
         overflow-y: auto;
         color: #334155;
@@ -385,6 +390,8 @@
 
       /* WiFi Info Card */
       .wifi-card {
+        box-sizing: border-box !important;
+        width: 100%;
         background: #f0fdf4;
         border: 1px solid #bbf7d0;
         border-radius: 8px;
